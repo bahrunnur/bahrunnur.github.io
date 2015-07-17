@@ -2,7 +2,6 @@
 title: "How do I do it: \"Modeling Women's Health Care Decisions\""
 date: 2015-05-24 01:00:00
 description: "My approaches for \"Modeling Women's Health Care Decisions\" competition that hosted by DrivenData"
-layout: post
 ---
 
 Planned Parenthood wants to assist women in America to choose proper health care for them. So, they are hosting competition at DrivenData to challenge Data Scientist around the world to predict which reproductive health care services are accessed by women in America.
