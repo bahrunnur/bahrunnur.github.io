@@ -1,0 +1,35 @@
+name: Bahrunnur
+description: A personal notes of my creations.
+meta_description: "Just a random posts for tech stuff topics like Machine Learning"
+
+aboutPage: true
+
+markdown: redcarpet
+highlighter: pygments
+
+paginate: 20
+baseurl: /
+domain_name: 'http://bahrunnur.github.io/'
+google_analytics: 'UA-65251690-1'
+disqus_shortname: 'bahrunnur'
+
+# Details for the RSS feed generator
+url:            'http://bahrunnur.github.io/'
+author:         'Bahrunnur'
+authorTwitter:  'bahrunnur'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
