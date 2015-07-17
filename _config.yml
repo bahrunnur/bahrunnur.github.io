@@ -9,12 +9,12 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-domain_name: 'http://bahrunnur.github.io/'
+domain_name: 'http://bahrunnur.github.io'
 google_analytics: 'UA-65251690-1'
 disqus_shortname: 'bahrunnur'
 
 # Details for the RSS feed generator
-url:            'http://bahrunnur.github.io/'
+url:            'http://bahrunnur.github.io'
 author:         'Bahrunnur'
 authorTwitter:  'bahrunnur'
 

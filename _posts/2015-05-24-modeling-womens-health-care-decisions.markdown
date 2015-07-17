@@ -1,5 +1,5 @@
 ---
-title: "How do I do it: \"Modeling Women's Health Care Decisions\""
+title: "How do I do it: 'Modeling Women's Health Care Decisions'"
 date: 2015-05-24 01:00:00
 description: "My approaches for \"Modeling Women's Health Care Decisions\" competition that hosted by DrivenData"
 ---
