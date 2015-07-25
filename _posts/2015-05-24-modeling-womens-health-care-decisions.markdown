@@ -40,6 +40,8 @@ There are many approaches to solve this task. But I opted to use more simple one
 
 
 ## Bird's View
+These are the outlines of my approach:
+
 ```
 1. Preprocessing
     1. Threshold checking

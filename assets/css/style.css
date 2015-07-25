@@ -187,7 +187,7 @@ a,
 ul 	{ margin:0; padding:0; }
 /*li	{ list-style-type:circle; list-style-position:inside; }*/
 li	{ list-style-position:inside; }
-ul li {list-style-type: circle;}
+ul li { list-style-type: circle; }
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
@@ -296,6 +296,15 @@ hr {
 }
 
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
+
+p > code {
+	font-family:Menlo, Monaco, Courier;
+	font-size:14px;
+	padding: 2px 4px;
+	margin: 2px;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+}
 
 pre	{
 	font-family:Menlo, Monaco, Courier;
