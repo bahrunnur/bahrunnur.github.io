@@ -4,7 +4,7 @@ meta_description: "It's just a random article for tech stuff topics like Machine
 
 aboutPage: true
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 paginate: 20
@@ -33,3 +33,6 @@ defaults:
             type: posts
         values:
             layout: post
+
+kramdown:
+    input: GFM
