@@ -43,3 +43,6 @@ defaults:
 
 kramdown:
     input: GFM
+
+plugins:
+    - jekyll-paginate
