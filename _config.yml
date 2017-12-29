@@ -1,10 +1,11 @@
 name: Bahrunnur
-description: The footsteps of my curiosity journey.
+description: The footsteps of my journey to eureka!.
 meta_description: "It's just a random article for tech stuff topics like Machine Learning"
 
 aboutPage: true
 
 markdown: kramdown
+# markdown: maruku
 highlighter: pygments
 
 paginate: 20
@@ -33,6 +34,12 @@ defaults:
             type: posts
         values:
             layout: post
+    -
+        scope:
+            path: "about"
+            type: pages
+        values:
+            layout: about
 
 kramdown:
     input: GFM

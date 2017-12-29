@@ -51,8 +51,9 @@ margin-bottom: 20px;
 html, body { height: 100%; }
 
 body {
-	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #666;
+	/*font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font:16px/1 'Source Sans Pro', sans-serif;
+	color: #222;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -60,7 +61,7 @@ body {
 h1 {
 	font-size: 30px;
 	letter-spacing: -1px;
-	color: #222;
+	color: #111;
 	font-weight: bold;
 }
 
@@ -94,19 +95,20 @@ h2 {
 }
 
 .profile h1 {
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 0px;
 	font-size: 20px;
 	color: #222;
 }
 
 .profile h2 {
-	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
+	font-size: 16px;
+	font-weight: 400;
+	color: #888;
+	margin-top: 10px;
+	/*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-style: normal;
 
 }
 
@@ -141,7 +143,7 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-  max-width: 600px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
 }
@@ -187,19 +189,19 @@ a,
 ul 	{ margin:0; padding:0; }
 /*li	{ list-style-type:circle; list-style-position:inside; }*/
 li	{ list-style-position:inside; }
-ul li { list-style-type: circle; }
+ul li { list-style-type: disc; }
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
 
-b, strong { font-weight: 500;
-  color: #1E2025; }
+b, strong { font-weight: 700;
+  color: #333; }
 em, i { font-style: italic; }
 
 #title {
 	display: inline-block;
 	line-height: 100%;
-	font-weight: 500;
+	font-weight: 700;
 	font-size: 19px;
 	margin: 0;
 	padding-bottom: 20px;
@@ -208,7 +210,7 @@ em, i { font-style: italic; }
 .description {
 	float: right;
 	font: italic 14px/1.4em Georgia,serif;
-	color: #aaa;
+	color: #888;
 }
 
 
@@ -231,23 +233,25 @@ em, i { font-style: italic; }
 }
 
 .post h1 {
-	margin-bottom:2 0px;
+	margin-bottom:20px;
 	color: #222;
-	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
+	/*font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;*/
+	font: 700 32px/1.4em 'Source Sans Pro',sans-serif;
 }
 
 .post h2 {
 	margin-bottom: 40px;
-	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
+	  /*font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+	  font: 700 24px/1.5 'Source Sans Pro',sans-serif;
 	  color: #111;
 }
 
 
 .post h2.headline {
 	/*font: italic 22px/1.3em Georgia,serif;*/
-	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: normal 13px/1.5em 'Source Sans Pro',sans-serif;
 	margin: -5px 0 40px 0;
-	color: #b2b9be;
+	color: #808080;
 	  font-size: 13px;
 	  text-transform: uppercase;
 	  letter-spacing: 2px;
@@ -256,15 +260,15 @@ em, i { font-style: italic; }
 }
 
 #post-list h2 {
-	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #aaa;
+	font: normal 17px/1.5em 'Source Sans Pro',sans-serif;
+	color: #888;
 	max-width: 400px;
 	margin-top: 2px;
 }
 
 h3, h4, h5 { color:#333; }
 
-h3 { font-size:20px; font-weight: 400; }
+h3 { font-size:20px; font-weight: bold; }
 h4 { font-size:16px; font-weight:bold; }
 h5 { font-size:15px; font-weight: bold; }
 
@@ -284,7 +288,8 @@ p.small {
 
 blockquote {
 	padding-left: 15px;
-	border-left: 3px solid #eee;
+	border-left: 4px solid #f55567;
+	background-color: #f8f8f8
 }
 
 hr {
@@ -295,11 +300,12 @@ hr {
 	background: #eee;
 }
 
-span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
+span.code { font-family:Menlo, Monaco, Consolas, Courier; background-color:#EEE; font-size:14px; }
 
 p > code {
-	font-family:Menlo, Monaco, Courier;
+	font-family:Menlo, Monaco, Consolas, Courier;
 	font-size:14px;
+	color: #808080;
 	padding: 2px 4px;
 	margin: 2px;
 	border: 1px solid #dfdfdf;
@@ -307,16 +313,16 @@ p > code {
 }
 
 pre	{
-	font-family:Menlo, Monaco, Courier;
+	font-family:Menlo, Monaco, Consolas, Courier;
 	white-space:pre-wrap;
 	/*border: 1px solid #ddd;*/
-	padding:20px;
+	padding:16px;
 	background-color:#fdfdfd;
 	/*font-size:14px;*/
 	overflow:auto;
 	border-radius: 3px;
 	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
+	  font-family: 'Source Code Pro',Menlo,Consolas,monospace;
 	  font-size: 13px;
 	  line-height: 1.5em;
 	  font-weight: 500;
@@ -403,14 +409,14 @@ Post List
 #post-list a {
 	color: #333;
 	display: block;
-	font: bold 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 19px/1.7 'Source Sans Pro',sans-serif;
 }
 
 #post-list .dates {
 	float: right;
 	position: relative;
 	top: 1px;
-	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 300 16px/1.8 'Source Sans Pro',sans-serif;
 	color: #bbb;
 }
 
@@ -470,7 +476,7 @@ Post List
 }
 
 #post-meta div span {
-	color: #aaa;
+	color: #888;
 	font-weight: 500;
 	display: block;
 }
@@ -560,7 +566,7 @@ h1.archive {
 
 h2.month {
 	width: 100%;
-	font: bold 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 13px/1 'Source Sans Pro', sans-serif;
 	text-transform: uppercase;
 	margin-top: 40px;
 	margin-bottom: 10px;
@@ -574,7 +580,7 @@ h2.month {
 
 #archive-list a {
 	display: block;
-	font: bold 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 17px/1.7 'Source Sans Pro', sans-serif;
 	color: #333;
 }
 
@@ -582,7 +588,7 @@ h2.month {
 	float: right;
 	position: relative;
 	top: 1px;
-	font: 300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 300 17px/1.7 'Source Sans Pro', sans-serif;
 	color: #bbb;
 }
 
@@ -602,12 +608,12 @@ h2.month {
 
 #post-list.archive.readmore h3{
 
-	  font: 400 20px "Helvetica Neue", Helvetica,Arial,sans-serif;
+	  font: 400 20px 'Source Sans Pro', sans-serif;
 	  margin-bottom: 30px;
 }
 
 #post-list.archive.readmore a{
-	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 400 16px/1.6 'Source Sans Pro', sans-serif;
 	color: #5694f1;
 }
 
@@ -616,7 +622,7 @@ h2.month {
 }
 
 #post-list.archive.readmore .dates{
-	font: 300 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 300 14px/1.6 'Source Sans Pro', sans-serif;
 }
 #sharing a.facebook {
   background: #4361b3;

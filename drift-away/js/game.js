@@ -1,6 +1,9 @@
 // Copyright © 2015 Bahrunnur
 // Licensed under the terms of the MIT License
 
+// some constant
+var WORLD_WIDTH = 3000;
+
 var GameState = function (game) {
 };
 
@@ -15,15 +18,23 @@ GameState.prototype.preload = function() {
     // create spike
     var spike = this.game.add.bitmapData(16, this.game.height);
     ctx = spike.context;
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = "#00ffb8";
     ctx.fillRect(0, 0, 16, this.game.height);
     this.game.cache.addBitmapData('spike', spike);
 
-    // create ground
-    var ground = this.game.add.bitmapData(this.game.width, 16)
-    ctx = ground.context;
+    // create rock
+    var rock = this.game.add.bitmapData(64, 64);
+    ctx = rock.context;
     ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, this.game.width, 16);
+    ctx.fillRect(0, 0, 64, 64);
+    this.game.cache.addBitmapData('rock', rock);
+
+    // create ground
+    // var ground = this.game.add.bitmapData(this.game.width, 16);
+    var ground = this.game.add.bitmapData(WORLD_WIDTH, 16);
+    ctx = ground.context;
+    ctx.fillStyle = "#00ffb8";
+    ctx.fillRect(0, 0, WORLD_WIDTH, 16);
     this.game.cache.addBitmapData('ground', ground);
 
     // create ship's exhaust
@@ -36,9 +47,6 @@ GameState.prototype.preload = function() {
 
 // Setup the example
 GameState.prototype.create = function() {
-    // Set stage background color
-    this.game.stage.backgroundColor = 0x232323;
-
     // Define motion constants
     this.ROTATION_SPEED = 210; // degrees/second
     this.ACCELERATION = 200; // pixels/second/second
@@ -46,6 +54,12 @@ GameState.prototype.create = function() {
     this.DRAG = -5; // pixels/second
     this.GRAVITY = 0; // pixels/second/second
     this.SPIKE_DELAY = 5000; // milisecond
+
+    // game stage
+    this.game.world.setBounds(0, 0, WORLD_WIDTH, this.game.height);
+
+    // Set stage background color
+    this.game.stage.backgroundColor = 0x07002C;
 
     // Add the ship to the stage
     this.ship = this.game.add.sprite(0, 0, 'ship');
@@ -122,6 +136,9 @@ GameState.prototype.create = function() {
 
     // Choose a random starting angle and velocity for the ship
     this.resetGame();
+
+    // camera follow the player (ship)
+    this.game.camera.follow(this.ship);
 };
 
 // Try to get a used explosion from the explosionGroup.
@@ -240,6 +257,12 @@ GameState.prototype.update = function() {
     }
 };
 
+// let's try debugging on render screen
+// GameState.prototype.render = function() {
+//     this.game.debug.cameraInfo(this.game.camera, 32, 32);
+//     this.game.debug.spriteCoords(this.ship, 32, 700);
+// };
+
 // This function should return true when the player activates the "jump" control
 // In this case, either holding the up arrow or tapping or clicking on the center
 // part of the screen.
@@ -254,10 +277,19 @@ GameState.prototype.upInputIsActive = function() {
     return isActive;
 };
 
+/**
+ ========================
+ Adversarial Object Class
+ ========================
+
+ this is a series of Classes that represent some objects that can kill the player
+ */
+
 // Spikes class
 var Spike = function (game) {
     var position = game.rnd.between(0, 1);
-    Phaser.Sprite.call(this, game, game.width, game.height*position, game.cache.getBitmapData('spike'));
+    // Phaser.Sprite.call(this, game, game.width, game.height*position, game.cache.getBitmapData('spike'));
+    Phaser.Sprite.call(this, game, WORLD_WIDTH, game.height*position, game.cache.getBitmapData('spike'));
     game.physics.enable(this, Phaser.Physics.ARCADE);
     this.anchor.set(0.5);
 };
@@ -271,6 +303,27 @@ Spike.prototype.update = function() {
         this.destroy();
     }
 };
+
+
+// Rocks class
+var Rocks = function (game) {
+    // TODO: generate some random starting point for this rocks
+    var position = 0;
+};
+
+Rocks.prototype = Object.create(Phaser.Sprite.prototype);
+Rocks.prototype.constructor = Rocks;
+
+Rocks.prototype.update = function() {
+    // TODO: generate some random value for this constant velocity
+    this.body.velocity.x = -200;
+    this.body.velocity.y = -100;
+
+    if ((this.x < game.width) || ((this.y > game.height) || (this.y < game.height))) {
+        this.destroy();
+    }
+};
+
 
 // Exhaust particle class
 // ExhaustParticle = function (game, x, y) {
