@@ -1,5 +1,6 @@
 ---
 title: "Bullshit Stuff"
+date: 2017-12-30 01:00:00
 description: "nothing personal"
 ---
 
